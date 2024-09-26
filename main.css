@@ -1,12 +1,25 @@
 body {
-    background-color: rgb(214, 245, 193);
+    background-color: rgb(218, 248, 197);
     font-family: verdana;
-  }
+    font-size: 2vh;
+}
   
   h1 {
-    color: rgb(185, 133, 0);
     text-align: center;
-    font-family: verdana;
+    font-weight: bold;
+    font-size: 6vh;
+  }
+
+  .content {
+    
+    width: clamp(15em, 80vw, 75em);
+    margin: 3em auto;
+    background-color: white;
+    border: solid;
+    border-width: 2px;
+    border-color: rgb(181, 126, 220);
+    padding: 1em 2em;
+    
   }
   
   p {
