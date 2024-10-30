@@ -1,0 +1,6 @@
+collections:
+  - events
+sass:
+    sass_dir: _
+    sass
+    style: compressed

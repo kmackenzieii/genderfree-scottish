@@ -1,0 +1,28 @@
+doctype !html
+html
+  head
+    block meta
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+    block head
+        block title
+            title GenderFree SCD
+    block scripts 
+    block styles
+        link(rel="stylesheet", href="assets/css/main.css")
+  body
+    block banner
+        .banner 
+            .banner-text
+                .genderfree GenderFree
+                .scd S C D
+    block nav
+        .nav
+            ul
+                each val in ['about', 'next', 'schedule', 'faq']
+                    li 
+                        a(href="#"+val)= val
+    block content
+        .content
+            != content
+    block footer
+        .footer

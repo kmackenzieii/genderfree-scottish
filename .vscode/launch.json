@@ -1,0 +1,25 @@
+{
+    
+    "configurations": [
+    {
+        "name": "11ty",
+        "type": "node",
+        "request": "launch",
+        "program": "${workspaceRoot}/node_modules/.bin/eleventy",
+        "stopOnEntry": false,
+        "runtimeArgs": ["--experimental-require-module"],
+        "cwd": "${workspaceRoot}",
+        "console": "internalConsole",
+    },
+    {
+        "name": "npm",
+        "type": "node",
+        "request": "launch",
+        "runtimeExecutable": "npm",
+        "stopOnEntry": false,
+        "runtimeArgs": ["debug"],
+        "cwd": "${workspaceRoot}",
+        "console": "internalConsole",
+    }
+    ],
+}
