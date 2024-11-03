@@ -1,5 +1,5 @@
 # GenderFree SCD
-This is the source repository for [GenderFreeSCD](www.genderfreescd.com).
+This is the source repository for [GenderFreeSCD](https://www.genderfreescd.com).
 
 The site is built using the [Pelican static site generator](https://getpelican.com/).
 
