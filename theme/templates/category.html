@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block content %}
+    {% if category.name == 'events' %}
+        {% include "events.html" %}
+    {% endif %}
+{% endblock content %}

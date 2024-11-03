@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% import "map.html" as map%}
+{% block content %}
+    <p>
+    <b>Scottish Country Dancing (SCD)</b> is high-energy enthusiastic set dancing done by
+    groups of people. Partners repeat different movements to travel through a set of
+    people. It’s sociable and fun!
+
+    <p>
+    A <b>GenderFree</b> dance means that there will be no point where your genders are
+    referenced on the dance floor, and there are no requirements that people of
+    certain genders dance in certain spaces or with certain other genders. We will use
+    the terms “Larks” and “Robins” to refer to specific roles when necessary.
+
+    <p>
+    We generally dance on odd Thursdays (1st, 3rd, and 5th) at the <a href="https://www.nesfa.org">NESFA Clubhouse</a>, located at <b>504 Medford St., Somerville, MA</b>.
+
+    <p>
+    Cost is <b>pay-what-you-can, $5 - $20</b> is the recommended donation.
+
+    <h3>Next Dance</h3>
+    {% set event = articles | selectattr('category', '==', 'events') | selectattr("date", "gt", TODAY) | reverse | first %}
+    {% include 'event.html' %}
+
+
+{% endblock content %}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+                        <meta charset="utf-8" />
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                        <meta name="generator" content="Pelican" />
+                        <title>GenderFree SCD</title>
+                        <link rel="stylesheet" href="/theme/css/main.css" />
+        </head>
+
+        <body id="index" class="home">
+                <header id="banner" class="body">
+                        <h1><a href="/">GenderFreeSCD</a></h1>
+                        <nav><ul>
+                                                <li class="active"><a href="/pages/genderfree-scd.html">GenderFree SCD</a></li>
+                        </ul></nav>
+                </header><!-- /#banner -->
+  <section id="content" class="body">
+    <h1 class="entry-title">GenderFree SCD</h1>
+    
+    <p>{% renderFile "./src/_includes/about.md" %}</p>
+<p _="%" endfor>{% for event in collections.events %}
+{{ event.page.inputPath }}
+{% endfor %}
+{% assign today = site.time | date: "%s" %}
+{% assign events = collections.events | sort: "start-time" %}
+{% for class in collections.events %}
+    {% assign class-start = class.start-time | date: "%s" %}
+    {% if class-start &gt;= today %}
+        {% assign next-class = class %}
+        {% break %}
+    {% endif %}
+    {% assign next-class = class %}</p>
+<div id="next">
+<h2>{{next-class.start-time | date: "%A, %B %d"}}</h2>
+{{next-class.start-time | date: "%l:%M %P"}} - {{next-class.end-time | date: "%l:%M %P"}}
+<p>
+<b>{{next-class.address}}</b>
+
+</p>
+<p>{{next-class.content}}.</p>
+
+</div>
+
+<div id="faq">
+<h2>FAQ</h2>
+{% for faq in collections.faq %}
+<h3>{{ faq.question }}</h3>
+<p>{{ faq.answer }}</p>
+{% endfor %}
+</div>
+
+</div>
+  </section>
+                <section id="extras" class="body">
+                                <div class="blogroll">
+                                        <h2>links</h2>
+                                        <ul>
+                                                        <li><a href="https://getpelican.com/">Pelican</a></li>
+                                                        <li><a href="https://www.python.org/">Python.org</a></li>
+                                                        <li><a href="https://palletsprojects.com/p/jinja/">Jinja2</a></li>
+                                                        <li><a href="#">You can modify those links in your config file</a></li>
+                                        </ul>
+                                </div><!-- /.blogroll -->
+                                <div class="social">
+                                        <h2>social</h2>
+                                        <ul>
+
+                                                        <li><a href="#">You can add links in your config file</a></li>
+                                                        <li><a href="#">Another social link</a></li>
+                                        </ul>
+                                </div><!-- /.social -->
+                </section><!-- /#extras -->
+
+                <footer id="contentinfo" class="body">
+                        <address id="about" class="vcard body">
+                                Proudly powered by <a rel="nofollow" href="https://getpelican.com/">Pelican</a>, which takes great advantage of <a rel="nofollow" href="https://www.python.org/">Python</a>.
+                        </address><!-- /#about -->
+
+                        <p>The theme is by <a rel="nofollow" href="https://www.smashingmagazine.com/2009/08/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+                </footer><!-- /#contentinfo -->
+
+        </body>
+</html>

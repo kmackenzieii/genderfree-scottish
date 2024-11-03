@@ -3,3 +3,5 @@ _site/
 package-lock.json
 .cache
 node_modules/
+.venv
+__pycache__/
