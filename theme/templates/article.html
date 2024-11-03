@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+    {% block content_title %}
+        {% if category.name == 'events' %}
+            <h2>{{article.locale_date}}</h2>
+            <h4>{{article.title}}</h4>
+        {% else %}
+            <h2>{{article.title}}</h2>
+        {% endif %}
+    {% endblock %}
+
+    {{article.content}}
+    
+
+{% endblock content %}

@@ -1,0 +1,6 @@
+{% block content_title %}
+    <h2>Upcoming Events</h2>
+{% endblock %}
+{% for event in articles | selectattr("date", "gt", TODAY) | reverse %}
+    {% include 'event.html' %}
+{% endfor%}
