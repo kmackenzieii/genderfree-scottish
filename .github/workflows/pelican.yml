@@ -1,5 +1,9 @@
 name: Deploy to GitHub Pages
 on:
+  schedule:
+    # Min, Hr, Day, Mon, WkDay
+    # Every saturday (day 6) at 6:06
+    - cron: "6 6 * * 6"   
   push:
     branches: ["main"]
   workflow_dispatch:
