@@ -1,30 +1,18 @@
 # Contributing
-## Adding content to the site
-### 1. Install Dependencies
-To commit changes to the website, you need [git](https://git-scm.com/) and a [github account](https://docs.github.com/en/get-started/start-your-journey/creating-an-account-on-github).
+## Adding content to the site (through github web interface)
+### 1. Log in to github
+To commit changes to the website you need a [github account](https://docs.github.com/en/get-started/start-your-journey/creating-an-account-on-github).
 
-A text editor, like [VSCod(e|ium)](https://vscodium.com/#install), but notepad or any plain-text editor will do. 
+### 2. Visit the repository
+Go to the [repository site](https://github.com/kmackenzieii/genderfree-scottish) and navigate to where you want to add/edit content. 
 
-### 2. Checkout this repository
-Using git, clone the repository. Command line example below, but your editor may be able to provide a graphical interface.
-```
-git clone git@github.com:kmackenzieii/genderfree-scottish.git
-```
-
-Note: Github has started enforcing 2FA and connecting with SSH. For instructions on generating and using ssh keys, see [this guide](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh). This is a one-time setup process, unless you change development computers.
-
-If you're coming back after some time, someone else may have updated the website. To sync your local copy with the current version, you need to run:
-```
-git fetch
-```
-to find out if there are any updates. Followed by
-```
-git pull
-```
-To pull those updates into your local copy.
 
 ### 3. Add/edit content
-Website content is located in `src`. Events, like individual dance classes go in `src/events`. Static pages like `About` and `FAQ` go in `src/pages`. 
+Events go in `src/events`, individual pages (like about or faq) go in `src/pages`. 
+
+Click the `Add file` button. You can choose to create a new file entirely within the web interface or upload a file you've already edited on your computer. 
+
+Alternatively, you can open a file that already exists and edit the content directly. 
 
 #### Pages
 Pages automatically get their own page with a link added to the menu. This link will be labeled with the Page title. 
@@ -62,6 +50,35 @@ Teaching by Kat Dutton to recorded music
 
 **COVID PROTOCOLS**: Because wastewater data is showing levels below 500 copies/mL, we will be *MASK RECOMMENDED* for this dance. If possible, please bring and wear a well-fitting high-filtration mask over your nose and mouth. Masking will not be required to participate and there may be dancers present who are unmasked.
 ```
+
+## Adding content to the site (without github web interface)
+### 1. Install Dependencies
+To commit changes to the website, you need [git](https://git-scm.com/) and a [github account](https://docs.github.com/en/get-started/start-your-journey/creating-an-account-on-github).
+
+A text editor, like [VSCod(e|ium)](https://vscodium.com/#install), but notepad or any plain-text editor will do. 
+
+### 2. Checkout this repository
+Using git, clone the repository. Command line example below, but your editor may be able to provide a graphical interface.
+```
+git clone git@github.com:kmackenzieii/genderfree-scottish.git
+```
+
+Note: Github has started enforcing 2FA and connecting with SSH. For instructions on generating and using ssh keys, see [this guide](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh). This is a one-time setup process, unless you change development computers.
+
+If you're coming back after some time, someone else may have updated the website. To sync your local copy with the current version, you need to run:
+```
+git fetch
+```
+to find out if there are any updates. Followed by
+```
+git pull
+```
+To pull those updates into your local copy.
+
+### 3. Add/edit content
+Website content is located in `src`. Events, like individual dance classes go in `src/events`. Static pages like `About` and `FAQ` go in `src/pages`. 
+
+See [above](#3-addedit-content)
 
 ### 4. Commit Changes
 You've made some changes or added new content. Now you need to commit your changes to the local copy of your repository and then push those changes to the remote (GitHub) repository.
