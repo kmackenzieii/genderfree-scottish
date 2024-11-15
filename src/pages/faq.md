@@ -17,5 +17,4 @@ Scottish dancing is traditionally high-energy but dancers are invited to bring t
 
 ### Will this happen regularly? When?
 The current plan is to dance on odd Thursdays --first, third, and fifth when available. 
-The next dances after this will be October 17th and November 7th (we will not be dancing on Halloween)
 
